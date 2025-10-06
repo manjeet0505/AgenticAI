@@ -3,3 +3,7 @@ special instructions given to our chatbot or assistant .
 
 About Zero_shot_prompting
 the model is given a direct question or task without prior examples.
+
+About Few_shot_prompting
+
+The Model is provided with a few examples before asking it to generate a response . 
