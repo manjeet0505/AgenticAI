@@ -1,0 +1,101 @@
+Gemini is Google’s family of Large Language Models (LLMs) that can perform a wide range of AI tasks such as text generation, summarization, reasoning, coding, and multimodal understanding (text, image, audio, etc.).
+
+Using the Gemini API, you can:
+
+1.Generate or summarize content
+
+2.Build chatbots and assistants
+
+3.Analyze and reason with data
+
+Integrate AI features into web or mobile applications
+
+⚙️ Step 1: Get Access to Gemini API
+
+Go to the official site → https://ai.google.dev
+
+Sign in with your Google account.
+
+Create a new API key from your Google AI Studio dashboard
+.
+
+Copy the key and keep it safe — you’ll need it for authentication.
+
+💻 Step 2: Install the Gemini API Client
+For Python:
+pip install google-generativeai
+
+For Node.js:
+npm install @google/generative-ai
+
+🔑 Step 3: Authenticate Using Your API Key
+Python Example:
+import google.generativeai as genai
+
+# Configure your API key
+genai.configure(api_key="YOUR_API_KEY")
+
+Node.js Example:
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+const genAI = new GoogleGenerativeAI("YOUR_API_KEY");
+
+🧩 Step 4: Generate Your First AI Response
+Python:
+model = genai.GenerativeModel("gemini-1.5-flash")
+
+prompt = "Explain Agentic AI in simple words."
+response = model.generate_content(prompt)
+
+print(response.text)
+
+Node.js:
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+const prompt = "Explain Agentic AI in simple words.";
+const result = await model.generateContent(prompt);
+
+console.log(result.response.text());
+
+🧠 Step 5: Explore More Gemini Features
+
+You can also try:
+
+Multimodal Input (text + image)
+
+Chat-like conversation memory
+
+Fine-tuning or prompt customization
+
+Embedding for semantic search
+
+Check out the official docs here:
+👉 https://ai.google.dev/gemini-api/docs
+
+💡 Project Ideas You Can Try
+
+🗣️ Build a conversational chatbot
+
+📚 AI-powered study assistant
+
+🧮 Code explainer or bug fixer
+
+🎨 Image + Text multimodal app
+
+🤖 Agentic workflow where AI makes decisions autonomously
+
+🧾 Credits
+
+This guide is created and maintained by Manjeet Mishra
+
+📍 Part of the Agentic AI Learning Repository — where students can explore, build, and understand the power of AI-driven agents.
+
+⭐ Stay Connected
+
+If you found this helpful:
+
+Give the repo a ⭐ Star
+
+Follow for upcoming AI + Agentic tutorials
+
+Share with your peers who want to learn AI practically! 🚀
