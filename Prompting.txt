@@ -1,2 +1,5 @@
 About System prompt
 special instructions given to our chatbot or assistant .
+
+About Zero_shot_prompting
+the model is given a direct question or task without prior examples.
