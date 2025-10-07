@@ -7,3 +7,5 @@ the model is given a direct question or task without prior examples.
 About Few_shot_prompting
 
 The Model is provided with a few examples before asking it to generate a response . 
+
+using structured formatting u can improve the quality of output such as binding the chatbot or model prompting to actual or real formats like json or other formats type .
