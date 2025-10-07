@@ -1,0 +1,14 @@
+1. Alpaca prompt
+Using these Hash signs-
+### Instructions : <SYSTEM_PROMPT> (writting or giving like i am this or solving only these questions) \n
+### Input: <USER_QUERY> \n
+
+### Response : \n
+
+
+2.CHAT ML
+
+{
+    "role": "system" | "role" | "assistant"
+    "content": "string"
+}
