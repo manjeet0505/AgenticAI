@@ -1,0 +1,54 @@
+text with ## are the commands u need to run
+
+Step 1. Install Hugging Face CLI
+
+Run the following command to install or update it:
+
+##pip install -U "huggingface_hub[cli]"
+
+
+ Note: If you see a warning like
+The scripts hf.exe and huggingface-cli.exe are installed in ... which is not on PATH,
+follow the next step to fix it.
+
+ Step 2. Add CLI to Your PATH (Windows)
+
+If your system doesn’t recognize the hf or huggingface-cli command, add the following directory to your PATH:
+
+C:\Users\<YourUsername>\AppData\Roaming\Python\Python312\Scripts
+
+Option 1 = Temporary (for the current PowerShell session)
+##$env:Path += ";C:\Users\<YourUsername>\AppData\Roaming\Python\Python312\Scripts"
+
+Option 2 =  Permanent (recommended)
+
+Press Windows + S → search “Environment Variables”.
+
+Click Edit the system environment variables → Environment Variables.
+
+Under User Variables, select Path → click Edit → New.
+
+Paste the path above - click OK - OK.
+
+Restart your terminal.
+
+ Step 3. Log in to Hugging Face
+
+Once installed and added to PATH, run:
+
+##huggingface-cli login
+
+
+or simply:
+
+##hf login
+
+
+Then enter your Hugging Face Access Token (you can find it at https://huggingface.co/settings/tokens
+).
+
+ Step 4. Verify Login
+
+You can verify that you’re logged in by running:
+
+##huggingface-cli whoami
