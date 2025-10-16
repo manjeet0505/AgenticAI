@@ -35,23 +35,35 @@ SYSTEM_PROMPT = """
       
 
 """
+message_history = [
+    {"role": "system", "content": SYSTEM_PROMPT},
+]
 
-response = client.chat.completions.create(
-    model="gemini-2.5-flash",
+user_query = input("👉")
+message_history.append({"role": "user" , "content": user_query})
+
+while True:
+    response = client.chat.completions.create(
+        model="gemini-2.5-flash",
     response_format={"type":"json_object"},
-    messages=[
-        {"role": "system", "content": SYSTEM_PROMPT},
-        {
-            "role": "user",
-            "content": "write a python code to find simple interest"
-        },
-        {"role": "assistant", "content": json.dumps({ "step": "START","content": "write a python code to find simple interest"})},
-        {"role": "assistant", "content": json.dumps({"step": "PLAN", "content": "The user wants a Python code to calculate simple interest. I need to define the simple interest formula (P * R * T / 100), take input for principal, rate, and time, then apply the formula and print the result."})},
-        {"role": "assistant", "content": json.dumps({
- "step": "PLAN",
- "content": "I need to outline the steps for the Python code: first, define a function to encapsulate the logic; second, get user input for the principal amount (P), annual interest rate (R), and time period in years (T); third, apply the simple interest formula `SI = (P * R * T) / 100`; and finally, display the calculated simple interest."
-})}
+    messages=[ message_history
     ]
-)
+    )
+    raw_result = response.choices[0].message.content
+    message_history.append({"role": "assistant" , "content": raw_result})
+    parsed_result = json.loads(raw_result)
 
-print(response.choices[0].message.content)
+    if parsed_result.get("step") == "START":
+        print("🔥" ,parsed_result.get("content"))
+        continue
+
+    if parsed_result.get("step") == "START":
+        print("🔥" ,parsed_result.get("content"))
+        continue
+
+    if parsed_result.get("step") == "START":
+        print("🔥" ,parsed_result.get("content"))
+        break;
+
+
+print("\n\n\n")
