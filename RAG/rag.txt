@@ -1,1 +1,47 @@
 RAG or Retrieval-Augmented Generation is an AI framework that combines the strengths of large language models (LLMs) with external knowledge sources.
+
+Main Phases of RAG
+
+RAG works in two core phases:
+
+1️. Indexing Phase
+
+(Data Preparation Phase)
+
+In this phase:
+
+The user provides data (PDFs, text files, notes, webpages, etc.)
+
+The data is:
+
+Cleaned
+
+Split into smaller chunks
+
+Converted into vector embeddings
+
+These embeddings are stored in a vector database
+
+ Purpose:
+To prepare and store knowledge in a way that can be searched efficiently later.
+
+2️. Retrieval Phase
+
+(Query Time Phase)
+
+In this phase:
+
+The user asks a question
+
+The question is converted into an embedding
+
+The system retrieves the most relevant chunks from the indexed data
+
+Retrieved data is passed to the LLM as context
+
+The LLM generates a final, informed response
+
+ Purpose:
+To use stored data intelligently while answering user queries.
+
+
