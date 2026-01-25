@@ -1,0 +1,13 @@
+pip install langchain
+
+#Community Loaders (PDF Loader yahin se aata hai)
+pip install langchain-community
+       from langchain_community.document_loaders import PyPDFLoader
+
+
+pip install langchain-text-splitters
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+
+pip install pypdf
+pip list | findstr langchain

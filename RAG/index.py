@@ -7,4 +7,11 @@ pdf_path = Path(__file__).parent / "story.pdf"
 loader = PyPDFLoader(file_path=pdf_path)
 docs = loader.load()
 
+
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=1000,
+    chunk_overlap=400
+)
+
+chunks = text_splitter.split_documents(documents=docs)
 print(docs[12])
