@@ -1,0 +1,1 @@
+Multimodal AI refers to artificial intelligence systems or models that can process and integrate information from multiple modalities or sources of data. These modalities can include text, images, videos, audio, and other forms of sensory data.
