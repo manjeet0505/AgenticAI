@@ -1,1 +1,27 @@
-memory
+Memory in Agentic AI
+In agentic AI, memory refers to how an AI agent stores, retrieves, and uses information over time to accomplish tasks. Unlike a simple chatbot, an agentic AI needs to remember context across steps, sessions, and interactions.
+There are four main types of memory:
+1. In-Context Memory (Short-Term)
+
+Information held directly in the model's active context window
+Fast and immediately accessible, but limited in size and lost when the session ends
+Example: conversation history, current task state
+
+2. External Memory (Long-Term)
+
+Information stored outside the model in databases, vector stores, or files
+Retrieved via search (e.g., semantic/vector search or keyword lookup)
+Persists across sessions and can scale to massive amounts of information
+Example: a knowledge base the agent queries with RAG (Retrieval-Augmented Generation)
+
+3. In-Weights Memory (Parametric)
+
+Knowledge baked into the model's parameters during training/fine-tuning
+Always available but static — can't be updated without retraining
+Example: Claude knowing that Paris is the capital of France
+
+4. In-Cache Memory (KV Cache)
+
+Saved computation states (key-value pairs) from previous processing
+Speeds up inference by avoiding recomputation of repeated context
+Example: caching a long system prompt so it doesn't need re-processing each turn
