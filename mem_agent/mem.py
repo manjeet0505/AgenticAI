@@ -1,6 +1,9 @@
+from encodings import oem
+
 from dotenv import load_dotenv
 from mem0 import Memory
 import os
+import json
 from openai import OpenAI
 load_dotenv()
 
@@ -33,3 +36,38 @@ config = {
 }
 
 mem_client = Memory.from_config(config)
+
+while True:
+
+    user_query = input(">")
+    search_memory = mem_client.search(query=user_query,user_id="manjeet")
+    memories = [
+        f"ID: {mem.get("id")}\nMemory: {mem.get("memory")}" 
+        for mem in search_memory.get("results")
+    ]
+    print("Found memories",memories)
+    SYSTEM_PROMPT= f"""
+           Here is the context about the user:
+           {json.dumps(memories)}  
+    """
+    response = client.chat.completions.create(
+                  model = "gpt-4.1-mini",
+                messages = [
+                      {"role": "system", "content": SYSTEM_PROMPT} ,
+                      {"role": "user", "content": user_query}
+                 ]
+       )
+
+    ai_response = response.choices[0].message.content
+
+    print("AI says:",ai_response)
+
+    mem_client.add(
+    user_id="manjeet",
+    messages=[
+        {"role": "user", "content": user_query},
+        {"role": "assistant", "content": ai_response}
+    ]
+)
+
+    print("Memory have been saved......")
