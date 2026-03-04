@@ -1,0 +1,11 @@
+Conversational AI agents are software systems that can engage in natural language dialogue with humans to accomplish tasks, answer questions, or provide assistance.
+Core characteristics:
+
+Natural language understanding — they interpret what you say or type, including intent, context, and nuance
+Goal-oriented behavior — unlike simple chatbots, they work toward completing tasks, not just responding to single prompts
+Memory & context — they track conversation history to maintain coherent, multi-turn dialogues
+Decision-making — they can reason, plan steps, and choose actions to achieve a goal
+
+How they differ from basic chatbots:
+Chatbot                     Rule-based responses      Single-turn Q&A               Static answers                     Scripted flows
+Conversational AI Agent     LLM-powered reasoning     Multi-turn, context-aware     Can take actions in the world      Flexible, adaptive behavior
