@@ -1,1 +1,4 @@
 Agentic AI systems rely on memory, context, and reasoning to operate autonomously across complex tasks. Knowledge graphs provide the structured relationships and semantic context needed for agents to make informed decisions, collaborate effectively, and adapt to evolving inputs. They enable agents to go beyond isolated prompts—linking facts, goals, and actions into coherent, goal-driven workflows.
+ 
+
+ One of the most widely used and popular graph databases today is Neo4j. Neo4j is an open-source graph database management system that allows developers to efficiently store, query, and visualize connected data. It is commonly used in applications such as recommendation systems, fraud detection, knowledge graphs, social networks, and AI-driven systems.
