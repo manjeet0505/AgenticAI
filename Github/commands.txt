@@ -76,3 +76,58 @@ git add app.js
 
  What it does:
 Adds only one file to staging.
+
+Save Changes (Commit)
+ Commit Changes
+git commit -m "initial commit"
+
+ What it does:
+Saves a snapshot of your project.
+
+Example:
+
+initial commit
+added login feature
+fixed bug
+
+Connect Project to GitHub
+9️ Add Remote Repository
+git remote add origin https://github.com/username/repo.git
+
+ What it does:
+Connects your local project to GitHub repository.
+
+Example:
+
+git remote add origin https://github.com/manjeet/portfolio.git
+
+Push Code to GitHub
+ Push Code
+git push -u origin main
+
+ What it does:
+
+uploads your code to GitHub
+
+origin → remote repo
+
+main → branch name
+
+-u → links local branch with remote branch
+
+After this, next pushes only need:
+
+git push
+
+Pull Latest Code
+ Pull Updates
+git pull origin main
+
+ What it does:
+Downloads latest code from GitHub repository.
+
+Used when:
+
+working in team
+
+repo updated online
