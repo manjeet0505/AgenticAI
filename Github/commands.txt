@@ -131,3 +131,28 @@ Used when:
 working in team
 
 repo updated online
+
+Working with Branches
+ Create New Branch
+git branch feature-login
+
+ What it does:
+Creates a new branch for development.
+
+Example use:
+
+feature-login
+feature-payment
+feature-dashboard
+
+ Switch Branch
+git checkout feature-login
+
+ What it does:
+Switches to the feature-login branch.
+
+ Go Back to Main Branch
+git checkout main
+
+ What it does:
+Switches back to the main branch.
