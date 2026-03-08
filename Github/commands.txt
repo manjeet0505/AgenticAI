@@ -1,14 +1,43 @@
+Check if Git is Installed
 git --version
+
+ What it does:
+Shows the installed Git version on your system.
+
+Example output:
+
+git version 2.44.0
+
+Configure Git (First Time Setup)
+2️ Set Your Git Username
 git config --global user.name "Your Name"
+
+ What it does:
+Sets your global Git username which appears in commits.
+
+Example:
+
+git config --global user.name "Manjeet Mishra"
+
+Set Your Git Email
 git config --global user.email "your@email.com"
+
+ What it does:
+Associates your email with commits.
+
+Example:
+
+git config --global user.email "manjeet@gmail.com"
+
+Initialize a Git Repository
+ Start Git Tracking
 git init
-git status
-git add . or git add "filename"
-git commit -m "initial commit"
-git remote add origin https://github.com/username/repo.git
-git push -u origin main
-git pull origin main
-git branch feature-login
-git checkout feature-login
-git checkout main
-git merge feature-login
+
+ What it does:
+Creates a new Git repository in your project folder.
+
+It creates a hidden folder:
+
+.git
+
+This folder stores all Git history.
