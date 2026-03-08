@@ -41,3 +41,38 @@ It creates a hidden folder:
 .git
 
 This folder stores all Git history.
+Check Project Status
+5️ Check File Status
+git status
+
+ What it does:
+Shows:
+
+modified files
+
+staged files
+
+untracked files
+
+Example output:
+
+Untracked files:
+  index.js
+
+
+Add Files to Staging Area
+ Add All Files
+git add .
+
+ What it does:
+Adds all project files to the staging area.
+
+ Add Specific File
+git add filename
+
+Example:
+
+git add app.js
+
+ What it does:
+Adds only one file to staging.
