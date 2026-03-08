@@ -156,3 +156,21 @@ git checkout main
 
  What it does:
 Switches back to the main branch.
+
+
+Merge Branch
+ Merge Feature into Main
+git merge feature-login
+
+ What it does:
+Combines feature-login branch code into main branch.
+
+Example workflow:
+
+main
+  │
+  └── feature-login
+
+After merge:
+
+main (includes feature-login code)
